@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Tecnologia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="alert alert-info text-center">
+            <!-- Nome aparece em cima -->
+            <h3 id="userName" class="fw-bold"></h3>
+            <!-- Email aparece logo abaixo -->
+            <p id="userEmail"></p>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-center text-primary mb-4">Quiz de Tecnologia</h1>
+        <form id="quiz">
+            <!-- Pergunta 1 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">1. Quem é considerado o pai da computação?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="Alan Turing" id="q1a1">
+                    <label class="form-check-label" for="q1a1">Alan Turing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="Bill Gates" id="q1a2">
+                    <label class="form-check-label" for="q1a2">Bill Gates</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" value="Steve Jobs" id="q1a3">
+                    <label class="form-check-label" for="q1a3">Steve Jobs</label>
+                </div>
+            </fieldset>
+            <!-- Pergunta 2 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">2. Qual linguagem é conhecida como a base da web?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="Python" id="q2a1">
+                    <label class="form-check-label" for="q2a1">Python</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="HTML" id="q2a2">
+                    <label class="form-check-label" for="q2a2">HTML</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" value="Java" id="q2a3">
+                    <label class="form-check-label" for="q2a3">Java</label>
+                </div>
+            </fieldset>
+            <!-- Pergunta 3 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">3. O que significa a sigla "HTTP"?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="HyperText Transfer Protocol" id="q3a1">
+                    <label class="form-check-label" for="q3a1">HyperText Transfer Protocol</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="HyperText Transmission Protocol" id="q3a2">
+                    <label class="form-check-label" for="q3a2">HyperText Transmission Protocol</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" value="HyperText Transfer Process" id="q3a3">
+                    <label class="form-check-label" for="q3a3">HyperText Transfer Process</label>
+                </div>
+            </fieldset>
+            <!-- Pergunta 4 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">4. Qual empresa criou o sistema operacional Windows?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="Apple" id="q4a1">
+                    <label class="form-check-label" for="q4a1">Apple</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="Microsoft" id="q4a2">
+                    <label class="form-check-label" for="q4a2">Microsoft</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" value="Google" id="q4a3">
+                    <label class="form-check-label" for="q4a3">Google</label>
+                </div>
+            </fieldset>
+            <!-- Botão -->
+            <button type="button" class="btn btn-primary w-100" onclick="submitQuiz()">Enviar</button>
+        </form>
+        <div class="result text-center mt-4" id="result"></div>
+    </div>
+    <script>
+        // Recupera os dados do localStorage
+        const userName = localStorage.getItem("userName");
+        const userEmail = localStorage.getItem("userEmail");
+
+        // Exibe os dados no quiz
+        document.getElementById("userName").textContent = userName || "Usuário";
+        document.getElementById("userEmail").textContent = userEmail || "Não informado";
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>
