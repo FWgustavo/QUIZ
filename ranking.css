@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(135deg, #007BFF, #00d4ff, #6a11cb, #ff6f61);
+    background-size: 300% 300%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    min-height: 100vh;
+    animation: gradientAnimation 12s ease infinite;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 900px;
+    width: 95%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #007BFF, #00d4ff, #6a11cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Cards de ranking */
+.card-ranking {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card-ranking:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Destaque para os 3 primeiros lugares */
+.card-ranking.first { border-left: 6px solid gold; }
+.card-ranking.second { border-left: 6px solid silver; }
+.card-ranking.third { border-left: 6px solid #cd7f32; }
+
+/* Conteúdo do card */
+.card-ranking span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botão voltar */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: transform 0.2s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

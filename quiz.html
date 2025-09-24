@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz de Tecnologia</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="quiz.css">
 </head>
-<body class="bg-light">
+<body>
     <div class="container mt-5">
         <div class="alert alert-info text-center">
-            <!-- Nome aparece em cima -->
             <h3 id="userName" class="fw-bold"></h3>
-            <!-- Email aparece logo abaixo -->
             <p id="userEmail"></p>
         </div>
     </div>
-    <div class="container mt-5">
+
+    <div class="container mt-3">
         <h1 class="text-center text-primary mb-4">Quiz de Tecnologia</h1>
+
+        <div class="progress mb-4">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+        </div>
+
         <form id="quiz">
             <!-- Pergunta 1 -->
             <fieldset class="mb-4">
@@ -36,9 +39,10 @@
                     <label class="form-check-label" for="q1a3">Steve Jobs</label>
                 </div>
             </fieldset>
+
             <!-- Pergunta 2 -->
             <fieldset class="mb-4">
-                <legend class="fw-bold">2. Qual linguagem é conhecida como a base da web?</legend>
+                <legend class="fw-bold">2. Qual linguagem de marcação é conhecida como a base da web?</legend>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q2" value="Python" id="q2a1">
                     <label class="form-check-label" for="q2a1">Python</label>
@@ -52,6 +56,7 @@
                     <label class="form-check-label" for="q2a3">Java</label>
                 </div>
             </fieldset>
+
             <!-- Pergunta 3 -->
             <fieldset class="mb-4">
                 <legend class="fw-bold">3. O que significa a sigla "HTTP"?</legend>
@@ -68,6 +73,7 @@
                     <label class="form-check-label" for="q3a3">HyperText Transfer Process</label>
                 </div>
             </fieldset>
+
             <!-- Pergunta 4 -->
             <fieldset class="mb-4">
                 <legend class="fw-bold">4. Qual empresa criou o sistema operacional Windows?</legend>
@@ -84,17 +90,86 @@
                     <label class="form-check-label" for="q4a3">Google</label>
                 </div>
             </fieldset>
-            <!-- Botão -->
+
+            <!-- Pergunta 5 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">5. Qual linguagem é usada para estilizar páginas web?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" value="CSS" id="q5a1">
+                    <label class="form-check-label" for="q5a1">CSS</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" value="HTML" id="q5a2">
+                    <label class="form-check-label" for="q5a2">HTML</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" value="JavaScript" id="q5a3">
+                    <label class="form-check-label" for="q5a3">JavaScript</label>
+                </div>
+            </fieldset>
+
+            <!-- Pergunta 6 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">6. Qual empresa criou o mecanismo de busca Google?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" value="Google" id="q6a1">
+                    <label class="form-check-label" for="q6a1">Google</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" value="Microsoft" id="q6a2">
+                    <label class="form-check-label" for="q6a2">Microsoft</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" value="Apple" id="q6a3">
+                    <label class="form-check-label" for="q6a3">Apple</label>
+                </div>
+            </fieldset>
+
+            <!-- Pergunta 7 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">7. Qual é o principal dispositivo de entrada de um computador?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" value="Teclado" id="q7a1">
+                    <label class="form-check-label" for="q7a1">Teclado</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" value="Monitor" id="q7a2">
+                    <label class="form-check-label" for="q7a2">Monitor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" value="Caixa" id="q7a3">
+                    <label class="form-check-label" for="q7a3">Caixa de Som
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Pergunta 8 -->
+            <fieldset class="mb-4">
+                <legend class="fw-bold">8. O que significa a sigla URL?</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="Uniform Resource Locator" id="q8a1">
+                    <label class="form-check-label" for="q8a1">Uniform Resource Locator</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="Universal Resource Link" id="q8a2">
+                    <label class="form-check-label" for="q8a2">Universal Resource Link</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="Uniform Resource Language" id="q8a3">
+                    <label class="form-check-label" for="q8a3">Uniform Resource Language</label>
+                </div>
+            </fieldset>
+
             <button type="button" class="btn btn-primary w-100" onclick="submitQuiz()">Enviar</button>
         </form>
+
         <div class="result text-center mt-4" id="result"></div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
-        // Recupera os dados do localStorage
         const userName = localStorage.getItem("userName");
         const userEmail = localStorage.getItem("userEmail");
-
-        // Exibe os dados no quiz
         document.getElementById("userName").textContent = userName || "Usuário";
         document.getElementById("userEmail").textContent = userEmail || "Não informado";
     </script>
